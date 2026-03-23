@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3: Progress Bar UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+    
+        .progress-container {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            max-width: 550px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .progress-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+    
+        .skill-item {
+            margin-bottom: 1.8rem;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .skill-name {
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .skill-percentage {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .progress-bar-bg {
+            background: #e0e0e0;
+            border-radius: 10px;
+            height: 12px;
+            overflow: hidden;
+        }
+
+       
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            width: 0;
+            animation: fillBar 1.5s ease forwards;
+        }
+
+        @keyframes fillBar {
+            from {
+                width: 0;
+            }
+            to {
+                width: var(--width);
+            }
+        }
+
+       
+        .html-fill {
+            background: linear-gradient(90deg, #e44d26, #f16529);
+            --width: 80%;
+        }
+
+        .css-fill {
+            background: linear-gradient(90deg, #264de4, #2965f1);
+            --width: 70%;
+        }
+
+        .js-fill {
+            background: linear-gradient(90deg, #f0db4f, #f7df1e);
+            --width: 60%;
+        }
+
+        .info-note {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 480px) {
+            .progress-container {
+                padding: 1.5rem;
+            }
+            
+            .progress-container h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <h1>📊 My Skills</h1>
+        
+      
+        <div class="skill-item">
+            <div class="skill-header">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-percentage">80%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-fill html-fill"></div>
+            </div>
+        </div>
+
+     
+        <div class="skill-item">
+            <div class="skill-header">
+                <span class="skill-name">CSS3</span>
+                <span class="skill-percentage">70%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-fill css-fill"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-header">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percentage">60%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-fill js-fill"></div>
+            </div>
+        </div>
+
+        <div class="info-note">
+            ✨ Animated progress bars with smooth fill animation
+        </div>
+    </div>
+</body>
+</html>
