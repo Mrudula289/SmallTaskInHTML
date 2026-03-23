@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4: Customer Testimonials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            min-height: 100vh;
+            padding: 3rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+      
+        .testimonial-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-header h1 {
+            font-size: 2.5rem;
+            color: #1a2a3a;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+   
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+
+        .testimonial-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+
+        .customer-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            display: block;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+     
+        .customer-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a2a3a;
+            margin-bottom: 0.25rem;
+        }
+
+        .customer-title {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+
+        .star-rating {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+        }
+
+        .star-filled {
+            color: #ffc107;
+        }
+
+        .star-empty {
+            color: #e0e0e0;
+        }
+
+        .review-text {
+            color: #555;
+            line-height: 1.6;
+            font-style: italic;
+            margin-top: 0.5rem;
+            position: relative;
+        }
+
+        .review-text::before {
+            content: '"';
+            font-size: 2rem;
+            color: #ddd;
+            position: absolute;
+            top: -10px;
+            left: -5px;
+            opacity: 0.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .testimonial-header h1 {
+                font-size: 2rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="testimonial-header">
+            <h1>What Our Customers Say</h1>
+            <p>Real reviews from real people</p>
+        </div>
+
+        <div class="testimonials-grid">
+       
+            <div class="testimonial-card">
+                <img class="customer-img" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Johnson">
+                <h3 class="customer-name">Sarah Johnson</h3>
+                <p class="customer-title">Product Designer</p>
+                <div class="star-rating">
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                </div>
+                <p class="review-text">Absolutely amazing experience! The team went above and beyond to deliver exceptional results. Highly recommend their services!</p>
+            </div>
+
+       
+            <div class="testimonial-card">
+                <img class="customer-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                <h3 class="customer-name">Michael Chen</h3>
+                <p class="customer-title">CEO, TechStart</p>
+                <div class="star-rating">
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                </div>
+                <p class="review-text">Outstanding quality and attention to detail. The team delivered ahead of schedule and exceeded all expectations. Will definitely work with them again.</p>
+            </div>
+
+           
+            <div class="testimonial-card">
+                <img class="customer-img" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emily Rodriguez">
+                <h3 class="customer-name">Emily Rodriguez</h3>
+                <p class="customer-title">Marketing Director</p>
+                <div class="star-rating">
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-filled">★</span>
+                    <span class="star-empty">★</span>
+                </div>
+                <p class="review-text">Great service and friendly support. The results were impressive and I'm very satisfied with the overall experience.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
